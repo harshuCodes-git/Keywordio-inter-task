@@ -8,6 +8,8 @@ from django.contrib.auth.decorators import login_required,user_passes_test
 from datetime import datetime,timedelta,date
 from django.core.mail import send_mail
 from librarymanagement.settings import EMAIL_HOST_USER
+from django.contrib.auth import logout
+from django.shortcuts import redirect
 
 
 def home_view(request):
@@ -199,3 +201,9 @@ def contactus_view(request):
             send_mail(str(name)+' || '+str(email),message, EMAIL_HOST_USER, ['wapka1503@gmail.com'], fail_silently = False)
             return render(request, 'library/contactussuccess.html')
     return render(request, 'library/contactus.html', {'form':sub})
+
+
+def logout_view(request):
+    if request.method == 'GET':
+        logout(request)
+        return redirect('home')
