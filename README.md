@@ -151,12 +151,6 @@ python manage.py test
 ```
 
 
-
-## How It Works
-
-1. User Input: Enter details like location, budget, number of travelers, and companions.
-2. AI Optimization: Gemini AI analyzes input to recommend the best travel plan.
-3. Recommendations: Users receive suggestions for accommodations, activities, and transportation.
 4. Feedback: Continuous improvement based on user feedback and AI learning.
 
 
